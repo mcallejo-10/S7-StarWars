@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Variables de modo oscuro */
+:root {
+    --background-color-dark: #121212;
+    --text-color-dark: #ffffff;
+  }
+  
+  /* Aplicar los estilos del modo oscuro a todo el body */
+  body {
+    // background-color: var(--background-color-dark);
+    background-color: gray;
+    color: var(--text-color-dark);
+  }
+  
+  /* Puedes ajustar el color de otros elementos de Bootstrap si es necesario */
+  .navbar, .card, .btn {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
+  /* Enlace en modo oscuro */
+  a {
+    color: #bb86fc;
+  }
+  

@@ -1,0 +1,20 @@
+
+<button class="btn primary" type="submit"></button>
+<div class="container container-fluid">
+    <div class="list-ships row">
+        @for(ship of arrayShips; track ship.url) {
+            <div class=" col-12 col-sm-6 col-md-4">
+                <div class="m-2 card my-2">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ship.name}} </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ship.model}}</h6>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+
+
+
