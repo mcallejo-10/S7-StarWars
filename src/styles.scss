@@ -3,24 +3,25 @@
 /* Variables de modo oscuro */
 :root {
     --background-color-dark: #121212;
-    --text-color-dark: #ffffff;
+    --text-color-dark: #c1d61f;
   }
   
   /* Aplicar los estilos del modo oscuro a todo el body */
   body {
-    // background-color: var(--background-color-dark);
-    background-color: gray;
+    background-color: var(--background-color-dark)!important;
+    
     color: var(--text-color-dark);
   }
   
   /* Puedes ajustar el color de otros elementos de Bootstrap si es necesario */
-  .navbar, .card, .btn {
-    background-color: #1e1e1e;
-    color: #ffffff;
-  }
+//   .navbar, .card, .btn {
+//     background-color: #1e1e1e;
+//     color: #ffffff;
+//   }
   
-  /* Enlace en modo oscuro */
-  a {
-    color: #bb86fc;
-  }
+//   /* Enlace en modo oscuro */
+//   a {
+//     color: #bb86fc;
+//   }
+  
   

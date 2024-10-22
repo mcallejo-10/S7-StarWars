@@ -1,4 +1,4 @@
-export interface Starships {
+export interface Starship {
     name: string;
     model: string;
     manufacturer: string;
@@ -14,8 +14,8 @@ export interface Starships {
     starship_class: string;
     pilots: string[];
     films: string[],
-    created: Date;
-    edited: Date;
+    created: string;
+    edited: string;
     url: string
 }
 
@@ -24,5 +24,5 @@ export interface ApiResult {
     count: number;
     next: string;
     previous: string
-    results: Starships[];
+    results: Starship[];
 }
