@@ -1,31 +1,31 @@
-/* Variables de modo oscuro */
+// /* Variables de modo oscuro */
 
-$text-color-dark: #c1d61f;
-  /* Aplicar los estilos del modo oscuro a todo el body */
-  .container {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
+// $text-color-dark: #c1d61f;
+//   /* Aplicar los estilos del modo oscuro a todo el body */
+//   .container {
+//     background-color: var(--background-color-dark);
+//     color: var(--text-color-dark);
     
-    justify-items: center;
-  }
+//     justify-items: center;
+//   }
   
   
-  .navbar, .card, .btn {
-    background-color: #1e1e1e;
-    color: #b7b7b7;
-  }
+//   .navbar, .card, .btn {
+//     background-color: #1e1e1e;
+//     color: #b7b7b7;
+//   }
   
-  /* Enlace en modo oscuro */
-  a {
-    color: #bb86fc;
-  }
+//   /* Enlace en modo oscuro */
+//   a {
+//     color: #bb86fc;
+//   }
 
-  .complete-card {
-    justify-items: center;
-    max-width: 100%;
-    font-family: 'Courier New', Courier, monospace;
-  }
+//   .complete-card {
+//     justify-items: center;
+//     max-width: 100%;
+//     font-family: 'Courier New', Courier, monospace;
+//   }
   
-  .card-title {
-    font-weight: bolder;
-  }
+//   .card-title {
+//     font-weight: bolder;
+//   }

@@ -1,0 +1,21 @@
+
+<div class="container container-fluid">
+    <!-- llista -->
+      <div class="list-ships row">
+          @for(ship of arrayShips; track ship.url) {
+  
+              <div class=" col-12 card-link">
+                <a href="/starshipCard">
+                  <div class="m-2 card my-2">
+                      <div class="card-body">
+                          <h5 class="card-title">{{ship.name.toUpperCase()}} </h5>
+                          <h6 class="card-subtitle mb-2">{{ship.model}}</h6>
+                      </div>
+                  </div>
+                </a>
+              </div>
+          }
+      </div>
+  
+  </div>
+  
