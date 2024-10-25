@@ -1,10 +1,10 @@
 
 <div class="container container-fluid">
     <!-- llista -->
-      <div class="list-ships row">
+      <div class="list-ships row justify-content-center">
           @for(ship of arrayShips; track ship.url) {
   
-              <div class=" col-12 card-link">
+              <div class=" col-10 card-link">
                 <a href="/starshipCard">
                   <div class="m-2 card my-2">
                       <div class="card-body">
@@ -15,6 +15,15 @@
                 </a>
               </div>
           }
+          @if(nextUrl != null) {
+                      <div class="row justify-content-center">
+
+            <button class="btn btn-star" (click)="showMore()"> Show more
+              
+            </button>
+          </div>
+          }
+
       </div>
   
   </div>

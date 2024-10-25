@@ -31,8 +31,12 @@ export class StarshipsService {
     url: ''
     }
 
-  getAll() {
-    return this.httpClient.get<ApiResult>(this.baseUrl);
+  getAll(url:string | null) {
+    if(url){
+      return this.httpClient.get<ApiResult>(url);
+    }else {
+      return null;
+    }
   }
   getShipByName(urlShip:string) {
     

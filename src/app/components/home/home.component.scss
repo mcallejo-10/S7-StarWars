@@ -1,31 +1,29 @@
-// /* Variables de modo oscuro */
+body {
 
-// $text-color-dark: #c1d61f;
-//   /* Aplicar los estilos del modo oscuro a todo el body */
-//   .container {
-//     background-color: var(--background-color-dark);
-//     color: var(--text-color-dark);
+    background-image: url('/assets/img/millenialFalcon.png');
+    background-size: cover; // Ajusta la imagen para que cubra todo el fondo
+    background-position: center; // Centra la imagen en la pantalla
+    background-repeat: no-repeat;
+    height: 100% !important;
+    width: 100%;
+
+}
+
+.btn-star {
+    color: yellow;
+    border: 1px solid yellow;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.367);
+    max-width: 20rem;
+
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
     
-//     justify-items: center;
-//   }
-  
-  
-//   .navbar, .card, .btn {
-//     background-color: #1e1e1e;
-//     color: #b7b7b7;
-//   }
-  
-//   /* Enlace en modo oscuro */
-//   a {
-//     color: #bb86fc;
-//   }
-
-//   .complete-card {
-//     justify-items: center;
-//     max-width: 100%;
-//     font-family: 'Courier New', Courier, monospace;
-//   }
-  
-//   .card-title {
-//     font-weight: bolder;
-//   }
+    
+}
+a :hover {
+    box-shadow: 0 .125rem 1rem rgba(yellow, .075); 
+}

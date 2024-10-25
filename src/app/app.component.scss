@@ -9,16 +9,32 @@ html, body {
     min-height: 100vh; // Hace que el body siempre tenga al menos la altura de la ventana
   }
   
+  #app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-.container {
-    flex:1;
-    margin:0;
-    width: 100%;
-}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+    background-image: url('/assets/img/millenialFalcon.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
 app-footer {
     background-color: black;
     color: white;
     text-align: center;
     padding: 10px 0;
+    padding-top: 0;
     width: 100%;
   }

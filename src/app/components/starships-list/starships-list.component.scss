@@ -1,0 +1,29 @@
+.card {
+    background-color: #111111b7;
+    color: whitesmoke;
+    border: 1px solid #111111b7
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+a:hover {
+    text-shadow: 0 0 0.1rem rgba(255, 255, 255, 0.528)
+}
+
+.card:hover {
+    box-shadow: 0 0 0.5rem white;
+}
+
+.btn-star {
+    color: yellow;
+    border: 1px solid yellow;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.367);
+    max-width: 10rem;
+    margin: 1rem;
+
+}
