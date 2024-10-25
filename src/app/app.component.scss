@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;  // Asegúrate de que html y body ocupen el 100% de la altura de la ventana
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Hace que el body siempre tenga al menos la altura de la ventana
+  }
+  
+
+.container {
+    flex:1;
+    margin:0;
+    width: 100%;
+}
+app-footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+  }

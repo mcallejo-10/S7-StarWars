@@ -1,0 +1,22 @@
+
+
+.navbar {
+    background-color: black;
+    border: 3px solid rgb(81, 0, 255);
+
+    border-bottom: 2px solid white;
+}
+
+.container-fluid {
+    border: 1px solid red;
+ 
+    background-color: transparent;
+    color: white;
+}
+
+  .nav {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+    
+    justify-items: center;
+  }
