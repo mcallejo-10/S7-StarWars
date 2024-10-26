@@ -1,30 +1,46 @@
-
 <!-- card ship -->
 
 <div class="container container-fluid">
-    <div class="complete-card row">
-        <div class="card mb-3" >
-            <div class="row g-0">
-              <div class="col-md-4">                
-                <img src="assets/placeholder.jpg" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h3 class="card-title">{{selectedShip.name.toUpperCase()}}</h3>
-                  <p class="card-text">Model: {{selectedShip.model}}</p>
-                  <p class="card-text">Class: {{selectedShip.starship_class}}</p>
-                  <p class="card-text">Manufacturer: {{selectedShip.manufacturer}}</p>
-                  <p class="card-text">Cost: {{selectedShip.cost_in_credits}} credits</p>
-                  <p class="card-text">Length: {{selectedShip.length}}m</p>
-                  <p class="card-text">Speed:{{selectedShip.max_atmosphering_speed}}km/h</p>
-                  <p class="card-text">Crew:{{selectedShip.crew}}</p>
-                  <p class="card-text">Consumable: {{selectedShip.consumables}}</p>
-                  <p class="card-text">Hyperdrive rating: {{selectedShip.hyperdrive_rating}}</p>
-                  <p class="card-text">MGLT: {{selectedShip.MGLT}}</p>
-                  
-                </div>
-              </div>
+  <div class="complete-card row justify-content-center">
+    <div class="card m-3">
+      <div class="row g-0">
+        <div class="col-md-4 col-sm-6" id="img">
+          <img src="assets/placeholder.jpg" class="img-fluid rounded-start m-0" alt="image ship">
+        </div>
+        <div class="col-md-8 col-sm-6" id="text">
+          <div class="card-body">
+            <div class="row">
+              <h3 class="card-title">{{selectedShip.name.toUpperCase()}}</h3>
             </div>
+            <div class="row d-flex">
+              <div class="col-sm-6 ">
+
+                <p class="card-text ">Model: {{selectedShip.model}}</p>
+                <p class="card-text">Manufacturer: {{selectedShip.manufacturer}}</p>
+                <p class="card-text">Speed:{{selectedShip.max_atmosphering_speed}}km/h</p>
+                <p class="card-text">Hyperdrive rating: {{selectedShip.hyperdrive_rating}}</p>
+                <p class="card-text">Length: {{selectedShip.length}}m</p>
+              </div>
+              <div class="col-sm-6 ">
+                <p class="card-text">Class: {{selectedShip.starship_class}}</p>
+                <p class="card-text">MGLT: {{selectedShip.MGLT}}</p>
+                <p class="card-text">Consumable: {{selectedShip.consumables}}</p>
+                <p class="card-text">Cost: {{selectedShip.cost_in_credits}} credits</p>
+                <p class="card-text">Crew:{{selectedShip.crew}}</p>
+
+              </div>
+
+            </div>
+
           </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="d-flex row justify-content-center m-2">
+    <button class="btn btn-star ">
+      <a href="/starshipsList">Starships databank</a>
+    </button>
+  </div>
+
 </div>
