@@ -5,23 +5,22 @@
     <div class="complete-card row">
         <div class="card mb-3" >
             <div class="row g-0">
-              <div class="col-md-4">
-                <a href="/starshipList"></a>
+              <div class="col-md-4">                
                 <img src="assets/placeholder.jpg" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h3 class="card-title">{{actualShip.name.toUpperCase()}}</h3>
-                  <p class="card-text">Model: {{actualShip.model}}</p>
-                  <p class="card-text">Class: {{actualShip.starship_class}}</p>
-                  <p class="card-text">Manufacturer: {{actualShip.manufacturer}}</p>
-                  <p class="card-text">Cost: {{actualShip.cost_in_credits}} credits</p>
-                  <p class="card-text">Length: {{actualShip.length}}m</p>
-                  <p class="card-text">Speed:{{actualShip.max_atmosphering_speed}}km/h</p>
-                  <p class="card-text">Crew:{{actualShip.crew}}</p>
-                  <p class="card-text">Consumable: {{actualShip.consumables}}</p>
-                  <p class="card-text">Hyperdrive rating: {{actualShip.hyperdrive_rating}}</p>
-                  <p class="card-text">MGLT: {{actualShip.MGLT}}</p>
+                  <h3 class="card-title">{{selectedShip.name.toUpperCase()}}</h3>
+                  <p class="card-text">Model: {{selectedShip.model}}</p>
+                  <p class="card-text">Class: {{selectedShip.starship_class}}</p>
+                  <p class="card-text">Manufacturer: {{selectedShip.manufacturer}}</p>
+                  <p class="card-text">Cost: {{selectedShip.cost_in_credits}} credits</p>
+                  <p class="card-text">Length: {{selectedShip.length}}m</p>
+                  <p class="card-text">Speed:{{selectedShip.max_atmosphering_speed}}km/h</p>
+                  <p class="card-text">Crew:{{selectedShip.crew}}</p>
+                  <p class="card-text">Consumable: {{selectedShip.consumables}}</p>
+                  <p class="card-text">Hyperdrive rating: {{selectedShip.hyperdrive_rating}}</p>
+                  <p class="card-text">MGLT: {{selectedShip.MGLT}}</p>
                   
                 </div>
               </div>

@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
+import { Injectable, inject, signal } from '@angular/core';
 import { ApiResult, Starship } from '../interfaces/starships';
 import { SplitInterpolation } from '@angular/compiler';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -10,7 +11,8 @@ import { SplitInterpolation } from '@angular/compiler';
 export class StarshipsService {
   private baseUrl: string = 'https://swapi.dev/api/starships/';
   httpClient = inject(HttpClient)
-  ship: Starship = {
+  shipUrl: string = '';
+  selectedShip: Starship = ({
     name: '',
     model: '',
     manufacturer: '',
@@ -29,22 +31,28 @@ export class StarshipsService {
     created: '',
     edited: '',
     url: ''
-    }
+  });
 
-  getAll(url:string | null) {
-    if(url){
+  getAll(url: string | null) {
+    if (url) {
       return this.httpClient.get<ApiResult>(url);
-    }else {
+    } else {
       return null;
     }
   }
-  getShipByName(urlShip:string) {
-    
-     
-    return this.httpClient.get<ApiResult>(urlShip);
 
-
+  updateUrlShip(urlShip: string) {
+    this.shipUrl = urlShip;
+  
   }
+
+  getSelectedShip(): Observable <Starship>{
+    return this.httpClient.get<Starship>(this.shipUrl)
+      
+    
+  }
+
+
 
 }
 
