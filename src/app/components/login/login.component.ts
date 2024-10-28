@@ -9,7 +9,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-
+  loginTok: boolean = false;
+  userExist: boolean= false;
   loginForm  = new FormGroup({
   email: new FormControl('', [
     Validators.required,
@@ -19,5 +20,7 @@ export class LoginComponent {
     Validators.required,
   ]),
 })
-
+userTok() {
+  this.loginTok = true;
+}
 }

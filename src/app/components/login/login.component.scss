@@ -1,7 +1,8 @@
 .card {
     background-color: #111111b7;
     color: whitesmoke;
-    border: 1px solid #111111b7
+    border: 1px solid #111111b7;
+    width: 50%;
 }
 
 a {
@@ -23,4 +24,12 @@ a:hover {
     max-width: 10rem;
     margin: 1rem;
 
+}
+
+.form-control {
+    justify-content: start;
+    background-color: black;
+    border:1px solid #111111b7;
+    color:whitesmoke;
+    width: 100%
 }

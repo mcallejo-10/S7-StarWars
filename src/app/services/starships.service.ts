@@ -51,8 +51,7 @@ export class StarshipsService {
   }
 
   getImage(imgId: string) {
-    const url: string = this.imgUrl + imgId + '.jpg'
-    return this.httpClient.get(url, {responseType: 'blob'})       
+    return this.imgUrl + imgId + '.jpg'
   }
 
 

@@ -34,7 +34,7 @@ export class StarshipCardComponent {
     url: ''
   });
 
-  img: string = "assets/placeholder.jpg";
+  imgShip: string = "assets/placeholder.jpg";
   sanitizer: any;
 
   ngOnInit() {
@@ -47,16 +47,12 @@ export class StarshipCardComponent {
   getImageByid(url: string) {
 
     const id = url?.match(/(\d+)\/$/)?.[1];
+    this.imgShip = this.starshipService.getImage(id!)
+    console.log(this.imgShip);
 
-    this.starshipService.getImage(id!).subscribe({      
-      next: (blob) => {
-        const objectURL = URL.createObjectURL(blob); // Convertimos el blob en una URL temporal
-        this.img = this.sanitizer.bypassSecurityTrustUrl(objectURL); // Sanitizamos la URL
-      },
-      error: (error) => console.error('Error al cargar la imagen:', error)
-    });
-    console.log(this.img);
+    }
+
+
+
   
-
-  }
 }
