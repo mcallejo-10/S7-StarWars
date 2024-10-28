@@ -1,11 +1,11 @@
 <!-- card ship -->
 
-<div class="container container-fluid">
+<div class="container-fluid">
   <div class="complete-card row justify-content-center">
     <div class="card m-3">
       <div class="row g-0">
         <div class="col-md-4 col-sm-6" id="img">
-          <img src="assets/placeholder.jpg" class="img-fluid rounded-start m-0" alt="image ship">
+          <img src="{{img}}" class="img-fluid rounded-start m-0" alt="image ship">
         </div>
         <div class="col-md-8 col-sm-6" id="text">
           <div class="card-body">
@@ -15,7 +15,7 @@
             <div class="row d-flex">
               <div class="col-sm-6 ">
 
-                <p class="card-text ">Model: {{selectedShip.model}}</p>
+                <p class="card-text">Model: {{selectedShip.model}}</p>
                 <p class="card-text">Manufacturer: {{selectedShip.manufacturer}}</p>
                 <p class="card-text">Speed:{{selectedShip.max_atmosphering_speed}}km/h</p>
                 <p class="card-text">Hyperdrive rating: {{selectedShip.hyperdrive_rating}}</p>

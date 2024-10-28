@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class StarshipsService {
-  private baseUrl: string = 'https://swapi.dev/api/starships/';
+  private imgUrl: string = 'https://starwars-visualguide.com/assets/img/starships/';
   httpClient = inject(HttpClient)
   shipUrl: string = '';
   selectedShip: Starship = ({
@@ -47,11 +47,13 @@ export class StarshipsService {
   }
 
   getSelectedShip(): Observable <Starship>{
-    return this.httpClient.get<Starship>(this.shipUrl)
-      
-    
+    return this.httpClient.get<Starship>(this.shipUrl)   
   }
 
+  getImage(imgId: string) {
+    const url: string = this.imgUrl + imgId + '.jpg'
+    return this.httpClient.get(url, {responseType: 'blob'})       
+  }
 
 
 }
