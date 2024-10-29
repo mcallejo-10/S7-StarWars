@@ -1,29 +1,74 @@
-.card {
+.ships-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-ship {
+    display: flex;
     background-color: #111111b7;
     color: whitesmoke;
-    border: 1px solid #111111b7
+    border: 1px solid #111111b7;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        right: 10px;
+        width: 100px;
+        height: 19px;
+        background-color: rgba(0, 0, 0, 0.171);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+    }
+
+    &:hover {
+        box-shadow: 0 0 0.5rem white;
+    }
+
 }
+
 
 a {
     color: whitesmoke;
     text-decoration: none;
 
+    &:hover {
+        text-shadow: 0 0 0.1rem rgba(255, 255, 255, 0.528)
+    }
 }
 
-a:hover {
-    text-shadow: 0 0 0.1rem rgba(255, 255, 255, 0.528)
+#name {
+    font-size: 0.9rem;
 }
 
-.card:hover {
-    box-shadow: 0 0 0.5rem white;
+#model {
+    font-size: 0.5rem;
+    padding: 0;
 }
 
 .btn-star {
-    color: yellow;
+    color: whitesmoke;
     border: 1px solid yellow;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.367);
     max-width: 10rem;
     margin: 1rem;
 
+    &:hover {
+        color: yellow;
+    }
+}
+
+
+#img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 1;
+        object-fit: cover;
+    }
 }

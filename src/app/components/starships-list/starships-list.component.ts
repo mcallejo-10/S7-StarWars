@@ -41,4 +41,8 @@ export class StarshipsListComponent {
   getUrlShip(urlShip: string) {
     this.starshipService.updateUrlShip(urlShip);    
   }
+
+  showImage(urlShip:string) {
+    return this.starshipService.getImageByUrl(urlShip);
+  }
 }

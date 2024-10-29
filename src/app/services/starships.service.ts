@@ -50,9 +50,11 @@ export class StarshipsService {
     return this.httpClient.get<Starship>(this.shipUrl)   
   }
 
-  getImage(imgId: string) {
-    return this.imgUrl + imgId + '.jpg'
-  }
+  getImageByUrl(url: string) {
+    const id = url?.match(/(\d+)\/$/)?.[1];
+    return this.imgUrl + id + '.jpg'
+    }
+
 
 
 }

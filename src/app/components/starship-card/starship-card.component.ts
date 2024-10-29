@@ -40,19 +40,7 @@ export class StarshipCardComponent {
   ngOnInit() {
     this.starshipService.getSelectedShip().subscribe((ship: Starship) => {
       this.selectedShip = ship;
-      this.getImageByid(this.selectedShip.url);
-      console.log("en init", this.selectedShip);
+      this.imgShip =  this.starshipService.getImageByUrl(this.selectedShip.url);
     });
-  }
-  getImageByid(url: string) {
-
-    const id = url?.match(/(\d+)\/$/)?.[1];
-    this.imgShip = this.starshipService.getImage(id!)
-    console.log(this.imgShip);
-
-    }
-
-
-
-  
+  }  
 }
