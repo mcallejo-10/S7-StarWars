@@ -6,6 +6,20 @@
       "lastName": "typicode",
       "email": "typicode@example.com",
       "password": "Password123"
+    },
+    {
+      "name": "Miranda",
+      "lastName": "Huertes",
+      "email": "mirandacallejonh@gmail.com",
+      "password": "123Abc",
+      "id": 2
+    },
+    {
+      "name": "mufasa",
+      "lastName": "Mufasa",
+      "email": "mufa@sa.cat",
+      "password": "111AAAa",
+      "id": 3
     }
   ]
 }

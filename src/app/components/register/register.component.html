@@ -1,4 +1,4 @@
-<p>register works!</p>
+
 <div class="card container-fluid col-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 mt-5">
   <form [formGroup]="registerForm">
     <div class="mb-3">
@@ -82,14 +82,8 @@
       }
     </div>
     <span class="d-flex justify-content-center mb-1">
-      <button type="submit" class="btn btn-star">Register</button>
+      <button type="submit" (click)="onRegister()" class="btn btn-star">Register</button>
     </span>
-    <!-- @if(errorMessage){
-        <span class="d-flex justify-content-center mb-1">
-          <div class="text-danger">
-            {{ errorMessage }}
-          </div>
-        </span>      
-      } -->
+
   </form>
 </div>
