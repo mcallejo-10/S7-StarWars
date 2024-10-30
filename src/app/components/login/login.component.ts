@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { UserAccessService } from '../../services/user-access.service';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,10 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class LoginComponent {
   loginTok: boolean = false;
   userExist: boolean= false;
+
+  private accessService = inject(UserAccessService);
+  
+
   loginForm  = new FormGroup({
   email: new FormControl('', [
     Validators.required,
@@ -20,6 +25,8 @@ export class LoginComponent {
     Validators.required,
   ]),
 })
+
+ 
 userTok() {
   this.loginTok = true;
 }
