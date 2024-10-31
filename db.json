@@ -8,18 +8,32 @@
       "password": "Password123"
     },
     {
-      "name": "Miranda",
-      "lastName": "Huertes",
-      "email": "mirandacallejonh@gmail.com",
-      "password": "123Abc",
-      "id": 2
-    },
-    {
       "name": "mufasa",
       "lastName": "Mufasa",
       "email": "mufa@sa.cat",
       "password": "111AAAa",
       "id": 3
+    },
+    {
+      "name": "Miranda",
+      "lastName": "Huertes",
+      "email": "Mirandacallejonh@gmail.com",
+      "password": "111AAA",
+      "id": 4
+    },
+    {
+      "name": "Miranda",
+      "lastName": "Huertes",
+      "email": "Mirandacallejonh@gmail.co",
+      "password": "777pppP",
+      "id": 5
+    },
+    {
+      "name": "Miranda",
+      "lastName": "Huertes",
+      "email": "mirandaaaadacallejonh@gmail.com",
+      "password": "111MMm",
+      "id": 6
     }
   ]
 }

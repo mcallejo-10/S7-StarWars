@@ -10,9 +10,7 @@ import { Observable } from 'rxjs';
 export class AuthService {
 
   private readonly http = inject(HttpClient);
-  private readonly apiUrl = environment.apiUrl;
-
-  
+  private readonly apiUrl = environment.apiUrl;  
   
   constructor() { }
   
@@ -21,6 +19,8 @@ export class AuthService {
   }
 
   checkEmailExists(email: string): Observable<User[]> {
+    console.log('heck email', email);
+    
     return this.http.get<User[]>(`${this.apiUrl}/users?email=${email}`);
   }
 }

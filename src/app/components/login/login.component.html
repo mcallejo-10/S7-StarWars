@@ -22,12 +22,12 @@
       </div>
       </div>
 
-      @if(loginTok == false) {
+      @if(isLoading == false) {
       <div class="p-3 d-flex justify-content-center">
-        <button type="submit" (click)="userTok()" class="btn btn-star">Continue</button>
+        <button type="submit" (click)="checkEmailLogin()" class="btn btn-star">Continue</button>
       </div>
       }
-      @if(userExist && loginTok) {
+      @if(userExist == true && isLoading == true) {
       <div class="form-group p-3">
         <span class="d-flex">
           <label for="password">Password:</label>
@@ -45,16 +45,16 @@
         <button type="submit" class="btn btn-star">Login</button>
       </div>
       }
-      @else if (userExist == false && loginTok){
+      @else if (userExist == false && isLoading){
       <a href="/register">Please register here</a>
 
       }
   </form>
-  <!-- @if(errorMessage){
+  @if(errorMessage){
       <div class="error p-0 text-center">{{ errorMessage }}</div>
     }
-  <div class="m-3 text-center">
+  <!-- <div class="m-3 text-center">
     If you are a new user, please register
-    <a class="underline" [routerLink]="['/register']"> here</a>
+    <a class="underline" [routerLink]="['/register']">If you are a new user, please register here</a>
   </div>   -->
 </div>-
