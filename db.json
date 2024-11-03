@@ -7,33 +7,27 @@
       "email": "typicode@example.com",
       "password": "Password123"
     },
+
     {
-      "name": "mufasa",
-      "lastName": "Mufasa",
-      "email": "mufa@sa.cat",
-      "password": "111AAAa",
-      "id": 3
+      "email": "mirancach@hotmail.com",
+      "password": "$2a$10$z/OVNd74NxWC4Zei04jGR.YlX0HB/fSl56q1P3dpjPndmcwWVdZq.",
+      "name": "Miri",
+      "lastName": "Aley",
+      "id": 8
     },
     {
-      "name": "Miranda",
-      "lastName": "Huertes",
-      "email": "Mirandacallejonh@gmail.com",
-      "password": "111AAA",
-      "id": 4
+      "email": "mirandacahu@gmail.com",
+      "password": "$2a$10$jkeWVtMsXoL4tbRgIGSWWOf5ZMpNQVSSfLtvdmHq64MajD8UxOD.e",
+      "name": "MIR",
+      "lastName": "CAL",
+      "id": 9
     },
     {
+      "email": "mirandacahu@hotmail.com",
+      "password": "$2a$10$3QaOF5Q2fEVBR.2Isd6iK.gu5Vr0lXzRQW7.4qRiQ9bBGdTBF0goa",
       "name": "Miranda",
       "lastName": "Huertes",
-      "email": "Mirandacallejonh@gmail.co",
-      "password": "777pppP",
-      "id": 5
-    },
-    {
-      "name": "Miranda",
-      "lastName": "Huertes",
-      "email": "mirandaaaadacallejonh@gmail.com",
-      "password": "111MMm",
-      "id": 6
+      "id": 10
     }
   ]
 }

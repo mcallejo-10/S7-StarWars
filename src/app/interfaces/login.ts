@@ -1,11 +1,11 @@
 import { User } from "./user";
 
 export interface LoginResponse {
-    accesToken: string;
+    accessToken: string;
     user: User;
 }
 
-interface LoginRequest {
+export interface LoginRequest {
     email: string;
     password: string;
 }

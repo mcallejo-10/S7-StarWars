@@ -1,5 +1,5 @@
-<p>login works!</p>
-<div class="card container-fluid ">
+
+<div class="card container-fluid mt-3">
 
   <form [formGroup]="loginForm">
     <div class="form-group p-3">
@@ -22,12 +22,12 @@
       </div>
       </div>
 
-      @if(isLoading == false) {
+      @if(isValidEmail == false) {
       <div class="p-3 d-flex justify-content-center">
         <button type="submit" (click)="checkEmailLogin()" class="btn btn-star">Continue</button>
       </div>
       }
-      @if(userExist == true && isLoading == true) {
+      @if(userExist == true && isValidEmail == true) {
       <div class="form-group p-3">
         <span class="d-flex">
           <label for="password">Password:</label>
@@ -40,21 +40,17 @@
           }
         </div>
         }
-      </div>
+        @if(errorMessage){
+          <span class="text-danger">{{ errorMessage }}</span>
+        }
+      </div>  
+ 
       <div class="p-3 d-flex justify-content-center">
-        <button type="submit" class="btn btn-star">Login</button>
+        <button type="submit" (click)="userLogin()" class="btn btn-star">Login</button>
       </div>
       }
-      @else if (userExist == false && isLoading){
-      <a href="/register">Please register here</a>
-
-      }
+     
   </form>
-  @if(errorMessage){
-      <div class="error p-0 text-center">{{ errorMessage }}</div>
-    }
-  <!-- <div class="m-3 text-center">
-    If you are a new user, please register
-    <a class="underline" [routerLink]="['/register']">If you are a new user, please register here</a>
-  </div>   -->
-</div>-
+
+
+</div>

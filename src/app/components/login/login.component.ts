@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 import { AuthService } from '../../services/auth.service';
 import { User } from '../../interfaces/user';
 import { Router, RouterLink } from '@angular/router';
+import { LoginRequest } from '../../interfaces/login';
 
 
 @Component({
@@ -13,9 +14,7 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-
-
-  isLoading: boolean = false;
+  isValidEmail: boolean = false;
   userExist: boolean = false;
   errorMessage!: string;
 
@@ -42,23 +41,40 @@ export class LoginComponent {
       next: (users: User[]) => {
         if (users.length > 0) {
             this.userExist = true;
-            this.isLoading = true;
+            this.isValidEmail = true;
             console.log('en next', users);
             
           } else {
             console.log('en else', users);
-
             this.userExist = false;
-            this.isLoading = true;
+            this.isValidEmail = true;
             this.router.navigate(['/register'])
           }
         },
         error: (error: string) => {
           console.error('Error al verificar email:', error);
           this.errorMessage = 'Error al verificar email';
-          this.isLoading = false;
+          this.isValidEmail = false;
         }
       })
+  }
+
+  userLogin() {
+    const credentials: LoginRequest = {
+      email: this.loginForm.get('email')?.value || '',
+      password: this.loginForm.get('password')?.value || ''      
+    };
+    this.authService.login(credentials).subscribe({
+      next: (response) => {
+        sessionStorage.setItem('authToken', response.accessToken);
+        console.log('Login exitoso', response.accessToken);
+      },
+      error: (error) => {       
+        this.errorMessage = 'Wrong password' 
+        console.error('Error en login', error);
+      }
+    });
+    
   }
 
 
