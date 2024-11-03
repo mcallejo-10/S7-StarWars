@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { User } from '../../interfaces/user';
@@ -17,7 +17,8 @@ export class LoginComponent {
   isValidEmail: boolean = false;
   userExist: boolean = false;
   errorMessage!: string;
-
+  isLogged: boolean = false;
+  
   
   loginForm = new FormGroup({
     email: new FormControl('', [
@@ -33,30 +34,40 @@ export class LoginComponent {
 
   constructor(private fb: FormBuilder, private auth: AuthService,
     private router: Router
-  ) { }
+  ) { 
+    effect(() => {
+      //signal
+      this.isLogged = this.authService.isLogged();
+    })
+  }
   
   checkEmailLogin() {
-    const loginEmail: string = this.loginForm.get('email')?.value?.toLowerCase() || '';
-    this.authService.checkEmailExists(loginEmail).subscribe({
-      next: (users: User[]) => {
-        if (users.length > 0) {
-            this.userExist = true;
-            this.isValidEmail = true;
-            console.log('en next', users);
-            
-          } else {
-            console.log('en else', users);
-            this.userExist = false;
-            this.isValidEmail = true;
-            this.router.navigate(['/register'])
+    this.authService.isLoggedIn();
+    if(this.isLogged == false){
+      const loginEmail: string = this.loginForm.get('email')?.value?.toLowerCase() || '';
+      this.authService.checkEmailExists(loginEmail).subscribe({
+        next: (users: User[]) => {
+          if (users.length > 0) {
+              this.userExist = true;
+              this.isValidEmail = true;        
+              
+            } else {
+              
+              this.userExist = false;
+              this.isValidEmail = true;
+              this.router.navigate(['/register'])
+            }
+          },
+          error: (error: string) => {
+            console.error('Error al verificar email:', error);
+            this.errorMessage = 'Error al verificar email';
+            this.isValidEmail = false;
           }
-        },
-        error: (error: string) => {
-          console.error('Error al verificar email:', error);
-          this.errorMessage = 'Error al verificar email';
-          this.isValidEmail = false;
-        }
-      })
+        })
+    }else {
+      this.router.navigate(['/'])
+
+    }
   }
 
   userLogin() {
@@ -68,6 +79,9 @@ export class LoginComponent {
       next: (response) => {
         sessionStorage.setItem('authToken', response.accessToken);
         console.log('Login exitoso', response.accessToken);
+        this.authService.isLoggedIn()
+        this.router.navigate(['/'])
+
       },
       error: (error) => {       
         this.errorMessage = 'Wrong password' 

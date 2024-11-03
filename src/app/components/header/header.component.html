@@ -31,9 +31,17 @@
     <a class="navbar-brand mx-auto" href="#">Star Wars</a>
 
     <div>
-      <a class="nav-item nav-link mx-4" aria-current="page"  [routerLink]="['/login']">
-        <i class="bi bi-person"></i> Login
-      </a>
+      @if(isLogged == false) {
+        <a class="nav-item nav-link mx-4" aria-current="page"  [routerLink]="['/login']" >
+          <i class="bi bi-person"></i> Login
+        </a>
+      }
+       @if(isLogged==true) {
+        <p>{{userName}}</p>
+        <a class="nav-item nav-link mx-4" (click)="logout()" aria-current="page"  [routerLink]="['/']">
+          <i class="bi bi-person"></i> Logout
+        </a>
+      }
     </div>
   </div>
 </nav>
