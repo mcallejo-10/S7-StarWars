@@ -3,6 +3,7 @@ import { HomeComponent } from '../home/home.component';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { HttpHeaders } from '@angular/common/http';
+import { User } from '../../interfaces/user';
 
 @Component({
   selector: 'app-header',
@@ -15,35 +16,27 @@ export class HeaderComponent {
 
   private authService = inject(AuthService);
   isLogged: boolean = false;
-  userName: string = '';
+  userName: string = 'a';
+  userEmail: string = '';
 
   constructor() {
     effect(() => {
       //signal
       this.isLogged = this.authService.isLogged();
+      this.userEmail = this.authService.currentUserEmail();
     })
   }
-
-
-  getName() {
+  ngOnInit() {
     this.authService.isLoggedIn();
-    if (this.isLogged == true) {
-      this.authService.getUserByEmail().subscribe({
-        next: (user) => {
-          this.userName = user.name;
-        },
-        error: (error) => {
-          this.userName = 'Userrrr'
-        }
-      });
-    }
+    this.isLogged = this.authService.isLogged();
   }
+
+
 
   logout() {
-    this.isLogged = false;
     this.authService.logout();
-    console.log('is loged??:', this.isLogged);
-    
+    this.isLogged = this.authService.isLogged();
   }
+
 
 }

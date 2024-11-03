@@ -12,8 +12,9 @@ export class AuthService {
 
   private readonly http = inject(HttpClient);
   private readonly apiUrl = environment.apiUrl;
-  currentUserEmail: string = '';
+  currentUserEmail = signal<string>('');
   isLogged = signal<boolean>(false);
+  userName = signal<string>('');
 
   constructor() { }
 
@@ -26,33 +27,22 @@ export class AuthService {
   }
 
   login(credentials: LoginRequest): Observable<LoginResponse> {
-    this.currentUserEmail = credentials.email;
+    this.currentUserEmail.set(credentials.email);
     return this.http.post<LoginResponse>(`${this.apiUrl}/login`, credentials);
   }
 
   isLoggedIn() {
     const token = sessionStorage.getItem('authToken');
-    console.log(token);
-    
     if (token != null) {
       this.isLogged.set(true);
     } else {
       this.isLogged.set(false);
     }
   }
-  getUserByEmail(): Observable<User> {
-    return this.http.get<User>(`${this.apiUrl}/users?email=${this.currentUserEmail}`);
-  }
-  getUserInfo(): Observable<User> {
-    const token = localStorage.getItem('authToken');
-
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    return this.http.get<User>(`${this.apiUrl}/users/me`, { headers });
-
-  }
 
   logout() {
     sessionStorage.removeItem('authToken');
+    this.isLogged.set(false);
   }
 
 }

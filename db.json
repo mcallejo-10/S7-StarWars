@@ -7,7 +7,6 @@
       "email": "typicode@example.com",
       "password": "Password123"
     },
-
     {
       "email": "mirancach@hotmail.com",
       "password": "$2a$10$z/OVNd74NxWC4Zei04jGR.YlX0HB/fSl56q1P3dpjPndmcwWVdZq.",
@@ -28,6 +27,13 @@
       "name": "Miranda",
       "lastName": "Huertes",
       "id": 10
+    },
+    {
+      "email": "jordi@gmail.com",
+      "password": "$2a$10$ryiD5Hv9YM0MHrGo8CVjAe1k5ke9hoLQN.SSjWE5X7R0sfgB8yG8.",
+      "name": "jordi",
+      "lastName": "fer",
+      "id": 11
     }
   ]
 }
