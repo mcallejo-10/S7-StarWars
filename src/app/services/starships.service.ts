@@ -1,15 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject, signal } from '@angular/core';
 import { ApiResult, Starship } from '../interfaces/starships';
-import { SplitInterpolation } from '@angular/compiler';
 import { Observable } from 'rxjs';
+import { Pilot } from '../interfaces/pilots';
+import { Film } from '../interfaces/film';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class StarshipsService {
-  private imgUrl: string = 'https://starwars-visualguide.com/assets/img/starships/';
+  private imgUrl: string = 'https://starwars-visualguide.com/assets/img/';
+  // private imgPilotUrl: string = 'https://starwars-visualguide.com/assets/img/characters/';
+  // private imgFilmstUrl: string = 'https://starwars-visualguide.com/assets/img/films/';
+
   httpClient = inject(HttpClient)
   shipUrl: string = '';
   selectedShip: Starship = ({
@@ -43,17 +47,27 @@ export class StarshipsService {
 
   updateUrlShip(urlShip: string) {
     this.shipUrl = urlShip;
-  
   }
 
-  getSelectedShip(): Observable <Starship>{
-    return this.httpClient.get<Starship>(this.shipUrl)   
+  getSelectedShip(): Observable<Starship> {
+    console.log(this.shipUrl);
+    return this.httpClient.get<Starship>(this.shipUrl)
+    
   }
 
-  getImageByUrl(url: string) {
+
+  getPilot(urlPilot: string) {
+    return this.httpClient.get<Pilot>(urlPilot)
+  }
+  getFilm(urlPilot: string) {
+    return this.httpClient.get<Film>(urlPilot)
+  }
+  getImageByUrl(type: string, url: string) {
     const id = url?.match(/(\d+)\/$/)?.[1];
-    return this.imgUrl + id + '.jpg'
-    }
+    return this.imgUrl + type + id + '.jpg'
+  }
+
+
 
 
 

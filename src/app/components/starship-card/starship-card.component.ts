@@ -2,11 +2,13 @@ import { Component, inject } from "@angular/core";
 import { Starship } from "../../interfaces/starships";
 import { StarshipsService } from "../../services/starships.service";
 import { ActivatedRoute, RouterLink } from "@angular/router";
+import { PilotsComponent } from "../pilots/pilots.component";
+import { FilmsComponent } from "../films/films.component";
 
 @Component({
   selector: "app-starship-card",
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, PilotsComponent, FilmsComponent],
   templateUrl: "./starship-card.component.html",
   styleUrl: "./starship-card.component.scss",
 })
@@ -35,12 +37,12 @@ export class StarshipCardComponent {
   });
 
   imgShip: string = "assets/placeholder.jpg";
-  sanitizer: any;
+  
 
   ngOnInit() {
     this.starshipService.getSelectedShip().subscribe((ship: Starship) => {
       this.selectedShip = ship;
-      this.imgShip =  this.starshipService.getImageByUrl(this.selectedShip.url);
+      this.imgShip =  this.starshipService.getImageByUrl('starships/', this.selectedShip.url);
     });
   }  
 }

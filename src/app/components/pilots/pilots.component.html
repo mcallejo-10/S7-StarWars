@@ -1,0 +1,20 @@
+<div class="container container-fluid mt-4">
+<nav class="justify-content-center">
+    <p>Pilots</p>
+</nav>
+<div class="list-pilots d-flex row ">
+
+    @for(pilot of pilotsArray; track pilot.url) {
+    <div class="m-2 card card-pilot">
+
+        <div class="card-img" id="imgPilot">
+            <img src="{{showImage(pilot.url)}}" class="img-fluid rounded-start m-0" alt="{{pilot.name}} image">
+        </div>
+        <div class="card-body px-2">
+            <p class="card-title" id="name">{{pilot.name.toUpperCase()}} </p>
+
+        </div>
+    </div>
+    }
+</div>
+</div>

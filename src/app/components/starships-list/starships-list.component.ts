@@ -43,6 +43,6 @@ export class StarshipsListComponent {
   }
 
   showImage(urlShip:string) {
-    return this.starshipService.getImageByUrl(urlShip);
+    return this.starshipService.getImageByUrl('starships/', urlShip);
   }
 }
