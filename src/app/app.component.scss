@@ -1,12 +1,12 @@
 html, body {
-    height: 100%;  // Asegúrate de que html y body ocupen el 100% de la altura de la ventana
+    height: 100%;  
     margin: 0;
   }
   
   body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; // Hace que el body siempre tenga al menos la altura de la ventana
+    min-height: 100vh; 
   }
   
   #app-root {
@@ -24,12 +24,11 @@ html, body {
   
   .main-content {
     flex: 1;
-    background-image: url('/assets/img/millenialFalcon.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: black;
+   
   }
-  
+
+
 app-footer {
     background-color: black;
     color: white;
@@ -37,4 +36,5 @@ app-footer {
     padding: 10px 0;
     padding-top: 0;
     width: 100%;
+    height: 10%;
   }

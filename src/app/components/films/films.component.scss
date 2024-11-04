@@ -3,11 +3,12 @@ nav {
     border-bottom: 0.2px solid grey;
     border-top: 0.2px solid grey;
     font-size: large;
+    align-items: center;
   }
 
 .list-films {
     display: flex;
-    justify-content: space-between;
+    justify-content:start;
     @media (max-width: 768px) {
         justify-content: space-around;
 

@@ -37,6 +37,10 @@
       </div>
     </div>
   </div>
-<app-pilots></app-pilots>
-<app-films></app-films>
+  @if(selectedShip.pilots.length > 0) {
+    <app-pilots></app-pilots>
+  }
+  @if(selectedShip.films.length > 0) {
+    <app-films></app-films>
+  }
 </div>
