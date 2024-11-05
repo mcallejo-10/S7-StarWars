@@ -41,6 +41,13 @@
       "name": "Mufasa",
       "lastName": "King",
       "id": 12
+    },
+    {
+      "email": "minervavenso@gmail.com",
+      "password": "$2a$10$UQxi9.7LGH226ULa4.RvGuXNeqzfRPgOZ.NUGlLSrQ.DtCXwpPKxC",
+      "name": "miner",
+      "lastName": "venso",
+      "id": 13
     }
   ]
 }
