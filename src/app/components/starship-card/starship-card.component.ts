@@ -43,6 +43,8 @@ export class StarshipCardComponent {
     this.starshipService.getSelectedShip().subscribe((ship: Starship) => {
       this.selectedShip = ship;
       this.imgShip =  this.starshipService.getImageByUrl('starships/', this.selectedShip.url);
+      console.log(this.selectedShip);
+      
     });
   }  
 }

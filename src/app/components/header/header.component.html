@@ -37,7 +37,6 @@
         </a>
       }
        @if(isLogged==true) {
-         <p class="nav-item  mx-4">{{userName}}</p>
          <a class="nav-item nav-link mx-4" (click)="logout()" aria-current="page"  [routerLink]="['/']">
            <i class="bi bi-person"></i> Logout
           </a>

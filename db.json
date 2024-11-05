@@ -34,6 +34,13 @@
       "name": "jordi",
       "lastName": "fer",
       "id": 11
+    },
+    {
+      "email": "mufa@sa.cat",
+      "password": "$2a$10$YbSLol217PJ9d/plwLWMbuvroQuPjZsUFVy2g4biK7NWcnNkl8mpy",
+      "name": "Mufasa",
+      "lastName": "King",
+      "id": 12
     }
   ]
 }
