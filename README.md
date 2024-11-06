@@ -1,27 +1,104 @@
-# S7Starwars
+# 🚀 Star Wars Starships Explorer - Angular Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+## 📝 Descripción
+Este proyecto es una aplicación web desarrollada en Angular que muestra información sobre las naves espaciales del universo Star Wars. La aplicación consume datos de la API SWAPI (Star Wars API) y permite a los usuarios explorar un catálogo de naves con sus detalles específicos.
 
-## Development server
+## 🛠 Tecnologías Utilizadas
+- Angular 18
+- TypeScript
+- HTML5 & Sass
+- Bootstrap
+- RxJS para manejo de estados y llamadas asíncronas
+- Angular Guards para protección de rutas
+- JWT para autenticación
+- JSON Server Auth para backend de autenticación
+- Jasmine y Karma para testing
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🌟 Características
+- Listado de naves espaciales de Star Wars
+- Vista detallada de cada nave
+- Paginación de resultados
+- Visualización de imágenes de las naves
+- Sistema de autenticación completo (registro y login)
+- Rutas protegidas
+- Diseño responsive
+- Información detallada de pilotos y películas por nave
+- Tests unitarios
 
-## Code scaffolding
+## 🎯 Requisitos Previos
+- Node.js (versión 14+)
+- npm o yarn
+- Angular CLI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## 🚀 Instalación y Configuración
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Frontend
+```bash
+# Clonar el repositorio
+git clone [URL-del-repositorio]
 
-## Running unit tests
+# Navegar al directorio del proyecto
+cd starwars-project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Instalar dependencias
+npm install
 
-## Running end-to-end tests
+# Iniciar el servidor de desarrollo
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Backend (JSON Server Auth)
+```bash
+# Iniciar el servidor de autenticación
+npx json-server-auth db.json
+```
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🔒 Sistema de Autenticación
+
+### Características de Autenticación
+- Registro de usuarios con validación de email único
+- Login automático después del registro
+- Protección de rutas mediante Guards
+- Redirección a la página anterior después del login
+- Almacenamiento de tokens JWT
+
+
+## 🚢 Componentes Principales
+
+### 1. Lista de Naves
+- Vista protegida por AuthGuard
+- Paginación de 10 items por página
+- Implementación de lazy loading
+
+### 2. Detalle de Nave
+- Información completa de la nave
+- Componente de pilotos relacionados
+- Componente de películas relacionadas
+- Diseño basado en la web oficial de Star Wars
+
+### 3. Componente de Pilotos
+- Muestra tarjetas de pilotos relacionados con la nave
+- Consumo de endpoint específico de pilotos
+- Diseño responsive de tarjetas
+
+### 4. Componente de Películas
+- Visualización de películas donde aparece la nave
+- Integración con la API de películas
+- Diseño consistente con el tema de Star Wars
+
+## 🧪 Testing
+
+### Configuración de Tests
+```bash
+# Ejecutar todos los tests
+ng test
+```
+
+## 📚 Recursos y Referencias
+- [Documentación de Angular](https://angular.io/docs)
+- [Documentación de SWAPI](https://swapi.dev/documentation)
+- [JSON Server Auth Documentation](https://github.com/jeremyben/json-server-auth)
+- [Web Oficial de Star Wars](https://www.starwars.com/) (referencia de diseño)
+
