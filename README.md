@@ -36,10 +36,10 @@ Este proyecto es una aplicación web desarrollada en Angular que muestra informa
 ### Frontend
 ```bash
 # Clonar el repositorio
-git clone [URL-del-repositorio]
+git clone https://github.com/mcallejo-10/S7-StarWars.git
 
 # Navegar al directorio del proyecto
-cd starwars-project
+cd S7-StarWars
 
 # Instalar dependencias
 npm install
