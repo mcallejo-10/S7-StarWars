@@ -20,7 +20,7 @@ describe('HomeComponent', () => {
         { provide: ActivatedRoute, useValue: {} }
       ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
@@ -28,7 +28,7 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   });
   afterEach(() => {
-    httpTestingController.verify(); // Verifica que no hayan quedado solicitudes pendientes
+    httpTestingController.verify();
   });
 
   it('should create', () => {

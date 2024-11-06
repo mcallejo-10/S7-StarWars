@@ -1,7 +1,6 @@
-
 <div class="card container-fluid col-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 mt-5">
   <div class="row pb-2">
-    <h5>You are not registered, 
+    <h5>You are not registered,
       join the dark side here</h5>
   </div>
   <form [formGroup]="registerForm">
@@ -91,11 +90,11 @@
 
   </form>
   @if(errorMessage){
-    <span class="d-flex justify-content-center">
-      <div class="text-danger">
-        {{ errorMessage }}
-      </div>
-    </span>      
+  <span class="d-flex justify-content-center">
+    <div class="text-danger">
+      {{ errorMessage }}
+    </div>
+  </span>
   }
-  
+
 </div>

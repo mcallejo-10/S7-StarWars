@@ -1,8 +1,9 @@
-
 <div class="card container-fluid mt-3">
 
   <form [formGroup]="loginForm">
     <div class="form-group p-3">
+      <div class="form-label">You must be on the dark side to see the starship data, 
+        please enter your email</div>
       <span class="d-flex">
         <label for="email">Email:</label>
       </span>
@@ -20,37 +21,36 @@
         </div>
         }
       </div>
-      </div>
+    </div>
 
-      @if(isValidEmail == false) {
-      <div class="p-3 d-flex justify-content-center">
-        <button type="submit" (click)="checkEmailLogin()" class="btn btn-star">Continue</button>
+    @if(isValidEmail == false) {
+    <div class="p-3 d-flex justify-content-center">
+      <button type="submit" (click)="checkEmailLogin()" class="btn btn-star">Continue</button>
+    </div>
+    }
+    @if(userExist == true && isValidEmail == true) {
+    <div class="form-group p-3">
+      <span class="d-flex">
+        <label for="password">Password:</label>
+      </span>
+      <input id="password" formControlName="password" type="password" class="form-control">
+      @if(loginForm.get('password')?.invalid && loginForm.get('password')?.touched){
+      <div class="error">
+        @if(loginForm.get('password')?.errors?.['required']){
+        <span class="text-danger">Password is required</span>
+        }
       </div>
       }
-      @if(userExist == true && isValidEmail == true) {
-      <div class="form-group p-3">
-        <span class="d-flex">
-          <label  for="password">Password:</label>
-        </span>
-        <input id="password" formControlName="password" type="password" class="form-control">
-        @if(loginForm.get('password')?.invalid && loginForm.get('password')?.touched){
-        <div class="error">
-          @if(loginForm.get('password')?.errors?.['required']){
-          <span class="text-danger">Password is required</span>
-          }
-        </div>
-        }
-        @if(errorMessage){
-          <span class="text-danger">{{ errorMessage }}</span>
-        }
-      </div>  
- 
-      <div class="p-3 d-flex justify-content-center">
-        <button type="submit" (click)="userLogin()" class="btn btn-star">Login</button>
-      </div>
+      @if(errorMessage){
+      <span class="text-danger">{{ errorMessage }}</span>
       }
-     
+    </div>
+
+    <div class="p-3 d-flex justify-content-center">
+      <button type="submit" (click)="userLogin()" class="btn btn-star">Login</button>
+    </div>
+    }
+
   </form>
-
 
 </div>

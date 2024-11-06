@@ -6,13 +6,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BehaviorSubject, of } from 'rxjs';
-import { LoginResponse } from '../../interfaces/login';
-import { signal, WritableSignal } from '@angular/core';
+
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
-  let httpTestingController: HttpTestingController;
   let authService: AuthService;
   let router: Router
 

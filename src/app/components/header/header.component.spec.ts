@@ -19,7 +19,7 @@ describe('HeaderComponent', () => {
         { provide: ActivatedRoute, useValue: {} }
       ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;

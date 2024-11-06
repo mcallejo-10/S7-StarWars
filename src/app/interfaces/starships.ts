@@ -22,7 +22,7 @@ export interface Starship {
 
 export interface ApiResult {
     count: number;
-    next: string;
-    previous: string
+    next: string | null;
+    previous: string | null;
     results: Starship[];
 }

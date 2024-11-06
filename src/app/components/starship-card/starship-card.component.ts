@@ -12,6 +12,7 @@ import { FilmsComponent } from "../films/films.component";
   templateUrl: "./starship-card.component.html",
   styleUrl: "./starship-card.component.scss",
 })
+
 export class StarshipCardComponent {
   starshipService = inject(StarshipsService);
   route = inject(ActivatedRoute);
@@ -37,14 +38,12 @@ export class StarshipCardComponent {
   });
 
   imgShip: string = "assets/placeholder.jpg";
-  
+
 
   ngOnInit() {
     this.starshipService.getSelectedShip().subscribe((ship: Starship) => {
       this.selectedShip = ship;
-      this.imgShip =  this.starshipService.getImageByUrl('starships/', this.selectedShip.url);
-      console.log(this.selectedShip);
-      
+      this.imgShip = this.starshipService.getImageByUrl('starships/', this.selectedShip.url);
     });
-  }  
+  }
 }

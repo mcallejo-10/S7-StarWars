@@ -1,23 +1,20 @@
-
 <div class="container container-fluid mt-4">
-    <nav >
+    <nav>
         <p class="my-2">Films</p>
     </nav>
     <div class="list-films d-flex row ">
-    
+
         @for(film of filmsArray; track film.url) {
         <div class="m-2 card card-film">
-    
+
             <div class="card-img" id="imgFilm">
                 <img src="{{showImage(film.url)}}" class="img-fluid rounded-start m-0" alt="{{film.title}} image">
             </div>
             <div class="card-body px-2">
                 <p class="card-title" id="title">{{film.title.toUpperCase()}} </p>
-    
+
             </div>
         </div>
         }
     </div>
-    </div>
-
-
+</div>

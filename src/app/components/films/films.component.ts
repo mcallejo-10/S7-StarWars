@@ -23,27 +23,20 @@ export class FilmsComponent {
     this.starshipService.getSelectedShip().subscribe({
       next: (ship: Starship) => {
         this.arrayUrlFilms = ship.films;
-          this.arrayUrlFilms.forEach(film => {
-      this.starshipService.getFilm(film).subscribe((film: Film) => {
-        this.filmsArray.push(film);
-        console.log('films', film);
-      })
-
-    })
+        this.arrayUrlFilms.forEach(film => {
+          this.starshipService.getFilm(film).subscribe((film: Film) => {
+            this.filmsArray.push(film);
+          })
+        })
       },
       error: (error) => {
         console.error('Error cargando film', error);
       }
     });
 
-
-  
-    console.log('pa', this.filmsArray);
   }
 
   showImage(urlShip: string) {
     return this.starshipService.getImageByUrl('films/', urlShip);
   }
-
-
 }

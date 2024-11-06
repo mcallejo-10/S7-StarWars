@@ -1,5 +1,3 @@
-
-
 <nav class="navbar navbar-expand-md nav-title">
   <div class="container-fluid d-flex justify-content-between align-items-center">
     <div class="d-flex">
@@ -7,8 +5,8 @@
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
-    
+
+
       <div class="collapse navbar-collapse ms-3" id="navbarText">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
@@ -32,15 +30,15 @@
 
     <div>
       @if(isLogged == false) {
-        <a class="nav-item nav-link mx-4" aria-current="page"  [routerLink]="['/login']" >
-          <i class="bi bi-person"></i> Login
-        </a>
+      <a class="nav-item nav-link mx-4" aria-current="page" [routerLink]="['/login']">
+        <i class="bi bi-person"></i> Login
+      </a>
       }
-       @if(isLogged==true) {
-         <a class="nav-item nav-link mx-4" (click)="logout()" aria-current="page"  [routerLink]="['/']">
-           <i class="bi bi-person"></i> Logout
-          </a>
-        }
+      @if(isLogged==true) {
+      <a class="nav-item nav-link mx-4" (click)="logout()" aria-current="page" [routerLink]="['/']">
+        <i class="bi bi-person"></i> Logout
+      </a>
+      }
     </div>
   </div>
 </nav>
@@ -55,5 +53,3 @@
     </li>
   </ul>
 </nav>
-
-

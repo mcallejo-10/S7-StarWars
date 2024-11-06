@@ -4,7 +4,7 @@ import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot } fr
 export const activateRouteGuard: CanActivateFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
   const routes = inject(Router)
   const token = sessionStorage.getItem('authToken')
-  console.log('guard', token);
+
   
   if (!token) {
     routes.navigate(['/login'], { queryParams: { returnUrl: state.url } });

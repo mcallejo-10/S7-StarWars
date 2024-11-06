@@ -1,18 +1,19 @@
-
 nav {
     border-bottom: 0.2px solid grey;
     border-top: 0.2px solid grey;
     font-size: large;
     align-items: center;
-  }
+}
 
 .list-films {
     display: flex;
-    justify-content:start;
+    justify-content: start;
+
     @media (max-width: 768px) {
         justify-content: space-around;
 
     }
+
     @media (max-width: 576px) {
         justify-content: center;
         margin: 1rem
@@ -39,17 +40,18 @@ nav {
     @media (max-width: 576px) {
         width: 75%;
     }
+
     &::before {
         content: '';
         position: absolute;
-        bottom: -1px; 
+        bottom: -1px;
         right: 20px;
         width: 85px;
         height: 10px;
-        background-color: rgb(0, 0, 0); 
-        border-radius: 3px; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-        clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%); 
+        background-color: rgb(0, 0, 0);
+        border-radius: 3px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
     }
 }
 
