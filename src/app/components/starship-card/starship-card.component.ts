@@ -38,12 +38,15 @@ export class StarshipCardComponent {
   });
 
   imgShip: string = "assets/placeholder.jpg";
+  imageLoaded:boolean = false;
 
 
   ngOnInit() {
+    this.imageLoaded = false;
     this.starshipService.getSelectedShip().subscribe((ship: Starship) => {
       this.selectedShip = ship;
       this.imgShip = this.starshipService.getImageByUrl('starships/', this.selectedShip.url);
+      this.imageLoaded = true;
     });
   }
 }

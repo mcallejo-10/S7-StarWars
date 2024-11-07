@@ -3,6 +3,11 @@
     color: whitesmoke;
     border: 1px solid #111111b7;
     width: 50%;
+    min-width: fit-content;
+    @media (max-width: 768px) {
+        font-size: 0.80rem;
+        
+    }
 }
 
 a {
@@ -19,6 +24,11 @@ a:hover {
     color: yellow ;
     font-size: large;
     margin: 1rem;
+    @media (max-width: 768px) {
+        font-size: 0.85rem;
+        
+    }
+    
 }
 .btn-star {
     color: yellow;

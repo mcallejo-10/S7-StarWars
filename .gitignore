@@ -5,6 +5,7 @@ node_modules
 /out-tsc
 /*.js
 /*.map
+.angular/cache/
 
 # Node modules
 /node_modules

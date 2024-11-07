@@ -1,5 +1,18 @@
 
 <div class="container-fluid">
+  @if(imageLoaded == false) {
+    <div class="container container-fluid d-flex justify-content-center">
+      <p class="ml-6 mt-4"></p>
+      <div class="lightsaber-progress">
+        <div class="lightsaber-hilt"></div>
+        <div class="lightsaber-blade progress-bar-animated" style="width: 75%;">  Loading... </div>
+      </div>
+
+    </div>
+
+
+  } 
+  @else {
   <div class="complete-card row justify-content-center">
     <div class="card m-3">
       <div class="row g-0">
@@ -38,4 +51,5 @@
   @if(selectedShip.films.length > 0) {
     <app-films></app-films>
   }
+}
 </div>

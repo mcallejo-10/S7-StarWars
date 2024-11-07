@@ -11,8 +11,7 @@ import { Film } from '../interfaces/film';
 })
 export class StarshipsService {
   private imgUrl: string = 'https://starwars-visualguide.com/assets/img/';
-  // private imgPilotUrl: string = 'https://starwars-visualguide.com/assets/img/characters/';
-  // private imgFilmstUrl: string = 'https://starwars-visualguide.com/assets/img/films/';
+
 
   httpClient = inject(HttpClient)
   shipUrl: string = '';
@@ -50,9 +49,8 @@ export class StarshipsService {
   }
 
   getSelectedShip(): Observable<Starship> {
-    console.log(this.shipUrl);
     return this.httpClient.get<Starship>(this.shipUrl)
-    
+
   }
 
 
