@@ -33,9 +33,8 @@ export class RegisterComponent {
     password: new FormControl('',
       [Validators.required,
       Validators.minLength(4),
-      Validators.maxLength(8),
-      Validators.pattern('^(?=.*[A-Z])(?=.*\\d).{4,8}$')
-      ])
+      Validators.pattern('^(?=.*[A-Z]).{4,}$')
+      ])   
   });
 
   private authService = inject(AuthService)

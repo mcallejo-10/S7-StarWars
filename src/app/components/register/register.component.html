@@ -76,11 +76,9 @@
       <div class="text-danger">
         @if(registerForm.get('password')?.errors?.['required']) { Password is
         required } @if(registerForm.get('password')?.errors?.['minlength']) {
-        Must be at least 3 characters long }
-        @if(registerForm.get('password')?.errors?.['maxlength']) { Must have a
-        maximum of 8 characters }
+        Must be at least 4 characters long }
         @if(registerForm.get('password')?.errors?.['pattern']) { Must have at
-        least one uppercase letter and at least 1 number }
+        least one uppercase letter }
       </div>
       }
     </div>

@@ -38,7 +38,7 @@ export class StarshipCardComponent {
   });
 
   imgShip: string = "assets/placeholder.jpg";
-  imageLoaded:boolean = false;
+  imageLoaded: boolean = false;
 
 
   ngOnInit() {
